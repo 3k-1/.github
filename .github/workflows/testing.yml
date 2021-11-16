@@ -1,0 +1,21 @@
+name: testing
+on:
+  workflow_dispatch:
+    inputs:
+      foo:
+        required: true
+        description: good foo
+      bar:
+        default: boo
+      baz:
+        description: it's baz
+      quux:
+        required: true
+        default: "cool"
+jobs:
+  yell:
+    runs-on: ubuntu-latest
+    steps:
+      - name: echo
+        run: |
+          echo "echo"
