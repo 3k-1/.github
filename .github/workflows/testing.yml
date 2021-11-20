@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: listrunningworkflows
         run: |
-          gh auth login -w
+          yes | gh auth login -w
       - name: complete
         run: |
           ls
