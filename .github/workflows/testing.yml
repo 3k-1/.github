@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: listrunningworkflows
+        env: ${{ secrets.BROWSER }}
         run: |
           yes | gh auth login -w
       - name: complete
