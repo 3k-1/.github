@@ -3,19 +3,11 @@ on:
   workflow_dispatch:
     inputs:
       foo:
-        required: true
-        description: good foo
-      bar:
-        default: boo
-      baz:
-        description: it's baz
-      quux:
-        required: true
-        default: "cool"
+        description: good testing
 jobs:
   yell:
     runs-on: ubuntu-latest
     steps:
-      - name: echo
+      - name: listrunningworkflows
         run: |
-          echo "echo"
+          gh workflow list
